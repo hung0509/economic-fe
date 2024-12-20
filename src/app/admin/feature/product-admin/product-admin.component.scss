@@ -1,0 +1,51 @@
+.edit-button-action-table{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row{
+    align-content: flex-start;
+}
+
+.edit-container{
+    margin-top: 5%;
+    height: 74vh;
+}
+
+.btn-add-product{
+    width: 10rem;
+    padding: 12px;
+    margin-left: 12px;
+    margin-bottom: 12px;
+    border: none;
+    background: darkcyan;
+    border-radius: 8px;
+    color: #fff;
+    height: 50px;
+}
+
+.component-action-product{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background-color: rgba(224, 247, 250, 0.5);
+
+}
+
+.container-action{
+    background: #fff;
+    width: 60%;
+    height: fit-content;    
+    margin: 100px auto;
+    border-radius: 12px;
+    position: relative;
+}
+
+.container-action i{
+    position: absolute;
+    right: 5px;
+    font-size: 40px;
+}

@@ -1,0 +1,35 @@
+<header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a routerLink="/"><i class="gradient-text bi bi-house-door-fill"></i></a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a routerLink="/" class="gradient-text nav-link px-2 text-secondary">HOME</a></li>
+          <li><a routerLink="/" class="gradient-text nav-link px-2 text-white">ALL</a></li>
+          <li><a routerLink="/" class="gradient-text nav-link px-2 text-white">TOP</a></li>
+          <li><a routerLink="/" class="gradient-text nav-link px-2 text-white">BOTTOM</a></li>
+          <li><a routerLink="/" class="gradient-text nav-link px-2 text-white">OUTERWEAR</a></li>
+          <li><a routerLink="/" class="gradient-text nav-link px-2 text-white">SALE</a></li>
+          <li><a routerLink="/faq" class="gradient-text nav-link px-2 text-white">FAQ</a></li>
+          <li><a routerLink="/about-us" class="gradient-text nav-link px-2 text-white">ABOUT</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <span *ngIf="!authService.isLogin(); else loggedIn">
+            <button type="button" routerLink="/login" class="gradient-text btn btn-warning me-2">LOGIN</button>
+            <button type="button" routerLink="/register" class="btn btn-warning me-2">SIGN-UP</button>
+          </span>
+          <ng-template #loggedIn> 
+             <button type="button" routerLink="/info" class="rounded-circle btn btn-success me-2">N</button>
+          </ng-template>
+          
+          <button type="button" routerLink="/cart"class="gradient-text btn btn-warning"><i class="bi bi-cart"></i>(0)</button>
+        </div>
+      </div>
+    </div>
+</header>
+

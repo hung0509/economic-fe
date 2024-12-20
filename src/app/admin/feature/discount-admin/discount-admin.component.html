@@ -1,0 +1,85 @@
+<div class="row edit-container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Discount</li>
+        </ol>
+    </nav>
+        <button (click)="createDiscount()" type="button" class="btn-add-product" >Add discount</button>
+    
+    <div class="col-12 mb-4 mb-lg-0">
+        <div class="card">
+            <h5 class="card-header">Management Discount</h5>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">CODE</th>
+                            <th scope="col">START AT</th>
+                            <th scope="col">END AT</th>
+                            <th scope="col">ACTIVE</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let discount of discounts | paginate: {itemsPerPage: itemsPerPage, currentPage: p, totalItems: totalItem}">
+                            <th scope="row">{{discount.index}}</th>
+                            <td style="text-transform: uppercase;">{{discount.code}}</td>
+                            <td>{{discount.start_at}}</td>
+                            <td>{{discount.end_at}}</td>
+                            <td class="d-flex justify-content-between" *ngIf="checkActive(discount)">
+                                <button (click)="unActive(discount)" class="edit-button"type="button">Active</button>
+                                <button (click)="loadDetailDiscount(discount)" class="edit-button"type="button"><i class="bi bi-eyeglasses"></i></button>
+                            </td>
+                            <td class="d-flex justify-content-between" *ngIf="!checkActive(discount)">
+                                <button style="background: gray;" class="edit-button"type="button">Noactive</button>
+                                <button (click)="loadDetailDiscount(discount)" class="edit-button"type="button"><i class="bi bi-eyeglasses"></i></button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <pagination-controls 
+                      (pageChange)="onPageChange($event)" 
+                      [maxSize]="maxSize" 
+                      [directionLinks]="true" 
+                      [responsive]="true" >
+                      </pagination-controls>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="detailDiscount">
+      <span class="header-detail">Detail discount</span>
+      <div class="container-detail-discount">
+        <div class="detail-discount">
+            <h3>DISCOUNT</h3>
+            <div class="d-flex justify-content-between" >
+              <img class="img-detail-container" src="https://thumbs.dreamstime.com/z/20-percentage-sign-12850513.jpg" alt="">
+              <div style="width: 65%;">
+                <div class="row-detail">
+                  <label for="">CODE:</label>
+                  <span style="text-transform: uppercase;">{{detailDiscount.code}}</span>
+                </div>
+                <div class="row-detail">
+                  <label for="">START_AT:</label>
+                  <span>{{detailDiscount.start_at}}</span>
+                </div>
+                <div class="row-detail">
+                  <label for="">END_AT:</label>
+                  <span>{{detailDiscount.end_at}}</span>
+                </div>
+                <div class="row-detail">
+                  <label for="">DISCOUNT</label>
+                  <span>20%</span>
+                </div>
+              </div>
+            </div> 
+        </div>     
+      </div>
+    </div>
+   
+</div>
+
+

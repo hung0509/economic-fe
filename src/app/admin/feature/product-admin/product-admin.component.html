@@ -1,0 +1,55 @@
+<div class="row edit-container">
+    <button (click)="display()" routerLink="/upload-product" class="btn-add-product" >ADD PRODUCT</button>
+    <div class="col-12 mb-4 mb-lg-0">
+        <div class="card">
+            <h5 class="card-header">Management Products</h5>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Vender</th>
+                            <th scope="col">Price</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">17371705</th>
+                            <td>Volt Premium Bootstrap 5 Dashboard</td>
+                            <td>TOP</td>
+                            <td>johndoe.com</td>
+                            <td>€61.11</td>
+                            <td>Aug 31 2020</td>
+                            <td class="edit-button-action-table">
+                                <a (click)="getIdProduct('872d8ba1-c5e6-484a-866d-ea276d77f0ce')" class="btn btn-sm btn-primary">Edit</a>
+                                <a  class="btn btn-sm btn-warning">Del</a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <pagination-controls 
+                      (pageChange)="p=$event" 
+                      [maxSize]="maxSize" 
+                      [directionLinks]="true" 
+                      [responsive]="true" >
+                      </pagination-controls>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+
+<!-- Add -->
+<ng-container *ngIf="componentAddProduct"> 
+    <div class="component-action-product">
+        <div class="container-action">
+            <app-edit-product (closeEvent)="handleClose()" [productIdSelect]="selectedProduct"></app-edit-product>
+        </div>
+    </div>
+</ng-container>
+

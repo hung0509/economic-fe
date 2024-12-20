@@ -1,0 +1,16 @@
+.fix{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    margin-right: 20px;
+}
+
+a.close{
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+

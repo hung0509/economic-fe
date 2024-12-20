@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+.gradient-text {
+    background: linear-gradient(to right, #d434b0, #8029fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

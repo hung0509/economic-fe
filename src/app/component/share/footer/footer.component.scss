@@ -1,0 +1,55 @@
+.footer {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: #000 !important;
+}
+
+.footer{
+    padding: 64px 16px 64px;
+    text-align: center;
+    opacity: 0.5;
+}
+.footer .power{
+    margin-top: 15px;
+}
+
+.footer .icon-footer{
+    font-size: 20px;
+}
+
+.btn-more-white {
+    display: inline-block !important;
+    padding: 7px 15px;
+    border: 1px solid;
+    color: #ffffff;
+    margin-top: 20px;
+    border-radius: 2px;
+}
+
+#home-shop-map {
+    background: url(//theme.hstatic.net/1000357687/1000967377/14/home_sm_img.png?v=350) no-repeat;
+    height: 300px;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home-shop-map .shop-info span {
+    display: block;
+    font-size: 28px;
+    letter-spacing: 4px;
+    color: #fff;
+}
+#home-shop-map .shop-info a {
+    text-decoration: none;
+}
+
+.btn-more-white:hover{
+    background: #fff;
+    color: #000;
+}

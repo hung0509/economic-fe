@@ -1,0 +1,41 @@
+<div class="form-login" >
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="mx-auto my-5 shadow">
+        <h1 class="d-flex gradient-text">LOGIN</h1>
+        <div class="form-group">
+          <label for="username">Username</label>
+            <input 
+              formControlName="username"
+                type="text" 
+                class="p5 form-control" 
+                id="username" 
+                name="username"
+                placeholder="Enter username....."
+                required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password"
+                formControlName="password"
+                 name="password"
+                 placeholder="Enter your password...."
+                 class="p5 form-control" 
+                 id="password"
+                required="">
+        </div>
+        <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+          <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
+          Sign Up
+        </button>
+
+        <h2 class="fs-5 fw-bold mb-3">Or use a third-party</h2>
+
+        <button class="w-100 py-2 mb-2 btn btn-outline-primary rounded-3" type="submit">
+          <svg class="bi me-1" width="16" height="16"><use xlink:href="#facebook"></use></svg>
+          Sign up with Facebook
+        </button>
+      </form>
+</div>
+
+
+
+

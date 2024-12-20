@@ -1,0 +1,124 @@
+<div class="form-login">
+    <form (ngSubmit)="onSubmit()" class="mx-auto my-5 shadow">
+        <h1 class="d-flex justify-content-center gradient-text">REGISTER</h1>
+        <div class="form-row">
+          <div class="col-md-12 mb-3">
+            <label for="username">First name</label>
+            <input 
+            type="text" 
+            class="form-control " 
+            id="username"
+             placeholder="First name"  
+             name="username"
+             required>
+          </div>
+          <div class="col-md-12 mb-3">
+            <label for="lastname">Last name</label>
+            <input 
+            type="text" 
+            class="form-control " 
+            id="lastname" 
+            name="lastname"
+            placeholder="Last name"  
+            required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-12 mb-3">
+            <label for="validationServerUsername">Username</label>
+            <div class="input-group">
+              <input 
+              type="text" 
+              class="form-control " 
+              id="validationServerUsername" 
+              placeholder="Username" 
+              name="username"
+              aria-describedby="inputGroupPrepend3" required>
+              <div class="invalid-feedback">
+                Please enter your name!
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 mb-3">
+            <label for="validationServerPassword">Password</label>
+            <div class="input-group">
+              <input 
+              type="password" 
+              name="password"
+              class="form-control " 
+              id="validationServerPassword" 
+              placeholder="Password" 
+              aria-describedby="inputGroupPrepend3" required>
+              <div class="invalid-feedback">
+                Please enter your password!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-12 mb-3">
+                <label for="validationServerRePassword">Re-Password</label>
+                <div class="input-group">
+                  <input
+                  type="password" 
+                  class="form-control " 
+                  id="re-password" 
+                  name="re-password"
+                  placeholder="Re-Password" 
+                  aria-describedby="inputGroupPrepend3" 
+                  required>
+                  <div class="invalid-feedback">
+                    Please enter your re-password!
+                  </div>
+                </div>
+            </div>
+          <div class="col-md-12 mb-3">
+            <label for="validationServer03">Email</label>
+            <input 
+            type="email" 
+            class="form-control" 
+            id="email" 
+            name="email"
+            placeholder="email" 
+            required>
+            <div class="invalid-feedback">
+              Please your email!
+            </div>
+          </div>
+          <div class="col-md-12 mb-3">
+            <label for="validationServer04">Phone number</label>
+            <input 
+            type="text"
+             class="form-control "
+              id="phone"
+              name="phone"
+               placeholder="Phone number"
+              required>
+            <div class="invalid-feedback">
+              Please your phone number!
+            </div>
+          </div>
+          <label for="validationServer04">Dob</label>
+          <input 
+          type="text" 
+          class="form-control" 
+          id="dob" 
+          name="dob" 
+          placeholder="Enter your date of birth" required>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input " type="checkbox" value="" id="invalidCheck3" required>
+            <label class="form-check-label" for="invalidCheck3">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </form>
+</div>
+

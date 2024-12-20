@@ -1,0 +1,25 @@
+.icon-delivery{
+    font-size: 32px;
+    padding: 12px;
+}
+
+.mt-6rem { 
+    margin-top: 8rem !important; 
+}
+
+.product-title.text-bold.my-3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+a.shadow.btn.custom-btn {
+    width: 150px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+a.shadow.btn.custom-btn:hover{
+    text-transform: capitalize;
+    background-color: #0093c4;
+    color: white;
+}

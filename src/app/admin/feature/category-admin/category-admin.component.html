@@ -1,0 +1,41 @@
+<div class="row edit-container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Category</li>
+        </ol>
+    </nav>
+
+    <form (ngSubmit)="onSubmit()" action="">
+        <input type="text" [(ngModel)]="categoryName" name="category" id="category" required>
+        <button type="submit" class="btn-add-product" ><i class="bi bi-plus-square"></i></button>
+    </form>
+    
+    <div class="col-12 mb-4 mb-lg-0">
+        <div class="card">
+            <h5 class="card-header">Management Products</h5>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Quantity</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let category of categories">
+                            <th scope="row">{{category.id}}</th>
+                            <td>{{category.name}}</td>
+                            <td>{{category.quantity}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+
+

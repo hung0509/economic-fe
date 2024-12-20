@@ -1,0 +1,34 @@
+form{
+    width: 100%;
+    margin: 2px 12px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    text-align: center;
+    color: darkcyan;
+    font-weight: 600;
+    opacity: 0.8;
+    margin: 12px 0;
+    padding-top: 20px;
+}
+
+img{
+    border-radius: 12px;
+    margin-right: 28px;
+    margin-top: 28px;
+    width: 180px;
+}
+
+.form-group button{
+    padding:8px 24px;
+    border: none;
+    background: darkcyan;
+    border-radius: 8px;
+    color: #fff;
+    height: 50px;
+    margin-top: 12px;
+    margin-right: 24px;
+}

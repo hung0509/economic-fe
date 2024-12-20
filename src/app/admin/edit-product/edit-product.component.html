@@ -1,0 +1,49 @@
+<h2>FORM ADD PRODUCT</h2>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    
+    <div *ngIf="isEdit"> 
+      <img [src]="productForm.get('images')?.value" alt="Product Image" width="200"> 
+    </div>
+    <div>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input class="form-control" id="name" formControlName="name" type="text">
+      </div>
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input class="form-control" id="description" formControlName="description" type="text">
+      </div>
+      <div class="form-group">
+        <label for="vendor">Vendor:</label>
+        <input class="form-control" id="vendor" formControlName="vendor" type="text">
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input class="form-control" id="price" formControlName="price" type="number">
+      </div>
+      <div class="form-group">
+        <label for="stock_quantity">Stock Quantity:</label>
+        <input class="form-control" id="stock_quantity" formControlName="stock_quantity" type="number">
+      </div>
+      <div class="form-group">
+        <label for="category">Category:</label>
+        <input class="form-control" id="category" formControlName="category" type="text">
+      </div>
+      <div class="form-group">
+        <label for="discount">Discount:</label>
+        <input class="form-control" id="discount" formControlName="discount" type="text">
+      </div>
+      <div class="form-group">
+        <label for="image">Image:</label>
+        <input class="form-control" id="image" type="file" (change)="onFileChange($event)">
+      </div>
+      <div class="d-flex form-group justify-content-end">
+        <button type="submit">Submit</button>
+        <button type="button" (click)="close()">Exit</button>
+      </div>
+    </div>
+    
+  </form>
+
+
+  
